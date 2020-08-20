@@ -1,8 +1,11 @@
 $(document).ready(function(){
   
-  $("form#pig-latin-form").submit(function(event){
+  $("form#userInput").submit(function(event){
     event.preventDefault();
-    pigLatin()
+    $('#result').append(pigLatin(#string).val());
+    $("#result").text
+    $("#userArray").show
+    
   });
 
   function pigLatin(str) {
@@ -10,7 +13,7 @@ $(document).ready(function(){
     const queYou = ["qu"]
     const vowels = ["a", "e", "i", "o", "u"];
     let vowelIndex = 0;
-  
+    
     if (vowels.includes(str[0])) {
       return str + "way";
     } else if (str[0] ==="q" && str[1] === "u")
@@ -25,7 +28,7 @@ $(document).ready(function(){
       }
       return str.slice(vowelIndex) + str.slice(0, vowelIndex) + "ay";
     }
-    else
+    
   }
 });
 
